@@ -1,5 +1,10 @@
 from PIL import Image, ImageDraw, ImageGrab
-import time
+import argparse, time
+
+# Parse the album name from the command line
+parser = argparse.ArgumentParser()
+parser.add_argument("album_name", type=str, help="Name of the album")
+args = parser.parse_args()
 
 # Wait for the Spotify window to be in focus
 delay_time = 3
@@ -31,5 +36,5 @@ draw.rounded_rectangle(
 rounded_cropped = Image.new("RGBA", cropped.size)
 rounded_cropped.paste(cropped, (0, 0), mask)
 
-# Change album name here
-rounded_cropped.save("Covers/Changes.png")
+# Run using `python extract_cover.py "album_name"`
+rounded_cropped.save(f"Covers/{args.album_name}.png")
