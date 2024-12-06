@@ -1,4 +1,9 @@
 from PIL import Image, ImageDraw, ImageGrab
+import time
+
+# Wait for the Spotify window to be in focus
+delay_time = 3
+time.sleep(delay_time)
 
 # Take a full screenshot
 screenshot = ImageGrab.grab()
@@ -27,4 +32,4 @@ rounded_cropped = Image.new("RGBA", cropped.size)
 rounded_cropped.paste(cropped, (0, 0), mask)
 
 # Change album name here
-rounded_cropped.save("Covers/thank u, next.png")
+rounded_cropped.save("Covers/Views.png")
