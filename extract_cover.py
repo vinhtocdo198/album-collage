@@ -3,12 +3,12 @@ from PIL import Image, ImageDraw, ImageGrab
 # Take a full screenshot
 screenshot = ImageGrab.grab()
 
-square_size = 641.5
+square_size = 640.5
 
 # Coordinates for the center crop
 screen_width, screen_height = screenshot.size  # For 1920x1080 resolution
-left = 639.25
-top = 159
+left = 639.5
+top = 159.5
 right = left + square_size
 bottom = top + square_size
 
