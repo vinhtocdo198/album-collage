@@ -12,7 +12,7 @@ grid_col = 10
 grid_size = (grid_row, grid_col)
 
 # Define margin size
-margin = 10
+margin = 20
 
 # Calculate canvas size with margins
 image_width, image_height = images[0].size
@@ -22,7 +22,7 @@ canvas_height = grid_size[1] * (image_height + margin) + margin
 # Create a new blank canvas with white background
 # bg_path = ""
 # canvas = Image.open(bg_path).resize((canvas_width, canvas_height))
-canvas = Image.new("RGBA", (canvas_width, canvas_height), (255, 255, 255, 255))
+canvas = Image.new("RGBA", (canvas_width, canvas_height), (166, 162, 159, 255))
 
 # Paste images onto the canvas with margins
 for index, image in enumerate(images):
@@ -39,6 +39,12 @@ for index, image in enumerate(images):
 
     # Paste the image with the mask to retain rounded corners
     canvas.paste(image, (x, y), mask)
+
+# Add a noise texture overlay
+# overlay = Image.open("overlay.jpg")
+# overlay = overlay.resize((canvas_width, canvas_height))
+# overlay.putalpha(128)  # Adjust transparency (0 = transparent, 255 = opaque)
+# canvas.paste(overlay, (0, 0), overlay)
 
 # Save the final collage
 canvas.save("album_collage.png")
