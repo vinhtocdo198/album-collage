@@ -32,4 +32,4 @@ rounded_cropped = Image.new("RGBA", cropped.size)
 rounded_cropped.paste(cropped, (0, 0), mask)
 
 # Change album name here
-rounded_cropped.save("Covers/Views.png")
+rounded_cropped.save("Covers/Changes.png")
