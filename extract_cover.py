@@ -7,8 +7,8 @@ parser.add_argument("album_name", type=str, help="Name of the album")
 args = parser.parse_args()
 
 # Wait for the Spotify window to be in focus
-delay_time = 3
-time.sleep(delay_time)
+# delay_time = 3
+# time.sleep(delay_time)
 
 # Take a full screenshot
 screenshot = ImageGrab.grab()

@@ -7,8 +7,8 @@ image_files = [f for f in os.listdir(image_dir) if f.endswith(".png")]
 images = [Image.open(os.path.join(image_dir, f)) for f in image_files]
 
 # Define grid size
-grid_row = 10
-grid_col = 10
+grid_row = 15
+grid_col = 7
 grid_size = (grid_row, grid_col)
 
 # Define margin size
